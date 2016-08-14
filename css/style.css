@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, Tahoma, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.answer_item {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.answer_list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  width: 320px;
+  background: #cde2f5;
+  border: 3px solid #000;
+  font-size: 20px;
+}
