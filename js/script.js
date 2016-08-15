@@ -7,8 +7,15 @@ var test = {
   },
 
   createQuestionList: function () { //cоздание упорядоченного списка
+    var wrapper = document.createElement('div');
+    var testForm = document.createElement('form');
     var questionList = document.createElement('ol');
-    document.body.appendChild(questionList);
+           
+    wrapper.className = 'wrapper';
+
+    document.body.appendChild(wrapper);
+    wrapper.appendChild(testForm);
+    testForm.appendChild(questionList);
 
       for (var i = 0; i < questions.length; i++) { //cоздание элементов упорядоченного списка (с вопросами)
         var questionItem = document.createElement('li');
@@ -38,12 +45,12 @@ var test = {
             labelItem.appendChild(answerText);
           }
       }
-  },
 
-  createButton: function () { //cоздание кнопки проверки результатов
-    var button = document.createElement('button');
-    document.body.appendChild(button);
-    button.innerHTML = testCheck;
+    var button = document.createElement('input'); //cоздание кнопки проверки результатов
+    button.setAttribute('type', 'submit');
+    button.className = 'button';
+    button.value = testCheck;
+    testForm.appendChild(button);
   },
 };
 
@@ -63,4 +70,3 @@ var answersSize = Object.keys(answers).length;
 /*Вывод DOM-объектов */
 test.createTitle();
 test.createQuestionList();
-test.createButton();
